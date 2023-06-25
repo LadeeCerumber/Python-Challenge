@@ -40,14 +40,6 @@ with open(file_path, newline="") as csvfile:
 
 average_profit_loss_change = sum(profit_loss_change_list) / len(profit_loss_change_list)
 
-# print("Financial Analysis")
-# print("------------------")
-# print(f"Total Months: {total_months}")
-# print(f"Total : ${total_profit_loss}")
-# print(f"Average Change: ${average_profit_loss_change:.2f}")
-# print(f"Greatest Increase in Profits: {greatest_increase_date} (${greatest_increase_amount})")
-# print(f"Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease_amount})")
-
 
 
 # Exporting the results to a text file
