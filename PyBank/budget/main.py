@@ -1,4 +1,4 @@
-
+#import the csv library
 import csv
 
 # Set the path for the input file
@@ -17,12 +17,17 @@ greatest_decrease_amount = 0
 # Open the input file and read the data
 with open(file_path, newline="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
+
+    #skips header rows of the csv file
     next(csvreader)
+
+    #create loop to iterate over csv data
     for row in csvreader:
         date = row[0]
         profit_loss = int(row[1])
         total_months += 1
         total_profit_loss += profit_loss
+
 
         if previous_profit_loss is not None:
             profit_loss_change = profit_loss - previous_profit_loss
@@ -37,7 +42,7 @@ with open(file_path, newline="") as csvfile:
                 greatest_decrease_date = date
 
         previous_profit_loss = profit_loss
-
+#calculating the average
 average_profit_loss_change = sum(profit_loss_change_list) / len(profit_loss_change_list)
 
 
